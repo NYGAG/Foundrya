@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundrya | Tech Consulting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body { font-family: 'Poppins', sans-serif; background: #0f0f0f; color: #ffffff; line-height: 1.6; overflow-x: hidden; }
+    nav { background: rgba(0,0,0,0.7); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+    nav a { color: #00ffd5; text-decoration: none; margin: 0 1rem; font-weight: 600; transition: color 0.3s ease; }
+    nav a:hover { color: #ffffff; }
+    nav .logo { font-size: 1.8rem; font-weight: 800; color: #00ffd5; }
+    header { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8') center/cover no-repeat fixed; text-align: center; }
+    header::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); z-index: 1; }
+    header h1, header p { position: relative; z-index: 2; }
+    header h1 { font-size: 4rem; font-weight: 800; color: #00ffd5; animation: fadeDown 1.5s ease forwards; }
+    header p { margin-top: 1rem; font-size: 1.5rem; color: #cccccc; animation: fadeUp 1.5s ease forwards; }
+    @keyframes fadeDown { 0% {opacity: 0; transform: translateY(-50px);} 100% {opacity: 1; transform: translateY(0);} }
+    @keyframes fadeUp { 0% {opacity: 0; transform: translateY(50px);} 100% {opacity: 1; transform: translateY(0);} }
+    section { padding: 6rem 2rem; max-width: 1200px; margin: auto; position: relative; }
+    section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-attachment: fixed; background-size: cover; background-position: center; opacity: 0.08; z-index: -1; }
+    #about::before { background-image: url('https://images.unsplash.com/photo-1559027615-5efc3e8d7a8c'); }
+    #services::before { background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb'); }
+    #portfolio::before { background-image: url('https://images.unsplash.com/photo-1551033540-8f23befc6e10'); }
+    #faq::before { background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d'); }
+    #contact::before { background-image: url('https://images.unsplash.com/photo-1506976785307-8732d8f42f58'); }
+    h2 { font-size: 2.5rem; color: #00ffd5; margin-bottom: 2rem; text-align: center; }
+    p { max-width: 800px; margin: 1rem auto; font-size: 1.2rem; color: #cccccc; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .card { background: #1a1a1a; padding: 2rem; border-radius: 20px; transition: all 0.4s ease; text-align: center; overflow: hidden; box-shadow: 0 0 0 rgba(0,255,213,0); }
+    .card:hover { transform: translateY(-10px) scale(1.03); background: #00ffd5; color: #0f0f0f; box-shadow: 0 0 20px rgba(0,255,213,0.7); }
+    .card h3, .card p { transition: color 0.4s ease; }
+    .card:hover h3, .card:hover p { color: #0f0f0f; }
+    .contact-button { background: linear-gradient(135deg, #00ffd5, #00b79e); color: #0f0f0f; padding: 1rem 3rem; font-size: 1.2rem; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; display: inline-block; margin-top: 2rem; text-decoration: none; }
+    .contact-button:hover { transform: scale(1.05); background: linear-gradient(135deg, #00b79e, #00ffd5); box-shadow: 0 8px 20px rgba(0, 255, 213, 0.4); }
+    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; background: #0f0f0f; margin-top: 5rem; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="logo">Foundrya</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+<header>
+  <h1>Foundrya</h1>
+  <p>Forging the Future of Technology</p>
+</header>
+<section id="about" data-aos="zoom-in-up">
+  <h2>About Us</h2>
+  <p>Innovating with purpose, delivering transformative digital solutions worldwide. Leading in AI, cloud, and digital strategy to empower next-gen businesses. Strategic, client-focused, innovation-driven at every stage of engagement.</p>
+</section>
+<section id="services" data-aos="zoom-in-up">
+  <h2>Our Services</h2>
+  <p>Predict, automate, and lead with custom AI solutions tailored to your needs. Resilient, secure cloud strategies to drive agility and efficiency in your operations. Align technology with business goals to accelerate growth and innovation.</p>
+</section>
+<section id="portfolio" data-aos="zoom-in-up">
+  <h2>Our Main Team</h2>
+  <div class="grid">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <h3>Brian Kearl - CTO</h3>
+      <p>Oversees technology and innovation initiatives. Leads product development, manages tech teams, selects systems, and ensures technology supports the company’s strategy.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Nithul Ganesh - CEO | CMO</h3>
+      <p>Leads the company, makes major decisions, sets the overall vision and strategy, directs marketing efforts, builds the brand, and drives customer engagement and growth.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <h3>Ethan Birchenall - CFO</h3>
+      <p>Manages the company’s financial health. Oversees budgeting, accounting, investments, and financial reporting, helping guide decisions and maintain financial strength.</p>
+    </div>
+  </div>
+</section>
+<section id="faq" data-aos="zoom-in-up">
+  <h2>FAQ</h2>
+  <div class="grid">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <h3>Industries?</h3>
+      <p>Finance, healthcare, e-commerce, and tech innovation hubs.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Timelines?</h3>
+      <p>From rapid 2-week sprints to strategic multi-month launches.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <h3>What makes Foundrya different?</h3>
+      <p>Innovation-first mindset + client obsession + technical mastery.</p>
+    </div>
+  </div>
+</section>
+<section id="contact" data-aos="zoom-in-up">
+  <h2>Contact</h2>
+  <div class="grid">
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Let's Build Together</h3>
+      <p>Get in touch to shape the future with Foundrya's experts.</p>
+      <a href="mailto:nithulganesh@gmail.com" class="contact-button">Contact Us</a>
+    </div>
+  </div>
+</section>
+<footer>
+  &copy; 2025 Foundrya. All rights reserved.
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ once: true, duration: 1200, easing: 'ease-out-cubic' });</script>
+</body>
+</html>
